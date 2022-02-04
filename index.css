@@ -21,7 +21,7 @@ body {
   padding: 5em;
   display: grid;
   align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(941px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(850px, 1fr));
   justify-items: center;
 }
 
@@ -44,10 +44,7 @@ header span {
   display: inline-flex;
   justify-content: space-between;
   width: min(100%, 941px);
-}
-
-.counter > * + * {
-  margin: 1.2em 0;
+  gap: 1.5em;
 }
 
 .counter .counterLabel {
