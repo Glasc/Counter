@@ -2,12 +2,15 @@ const counterNumber = document.querySelector('.counterNumber')
 const addBtn = document.querySelector('.add')
 const substractButton = document.querySelector('.substract')
 const buttonWrapper = document.querySelector('.buttonWrapper')
+const counterLimitSpan = document.querySelector('.counterLimit')
 
 const setCounterValue = (number) => (counterNumber.textContent = number)
 
 let currentCounterValue = 0
 const counterLimit = 15
 let limitReached = false
+
+counterLimitSpan.textContent = counterLimit
 
 const toggleLimitReached = (toggle) => {
   if (toggle) {
