@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins';
+}
+
+.container {
+  min-height: 100%;
+  background-color: #202434;
+  color: white;
+  font-size: 1.8rem;
+  padding: 5em;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(941px, 1fr));
+  justify-items: center;
+}
+
+.container > * + * {
+  margin: 1em 0;
+  margin-top: 2em;
+}
+
+header h1,
+header span {
+  color: #bbc9ff;
+}
+
+.counter {
+  width: 100%;
+  background-color: #2d3141;
+  padding: 2em;
+  padding-bottom: 1.5em;
+  border-radius: 13px;
+  display: inline-flex;
+  justify-content: space-between;
+  width: min(100%, 941px);
+}
+
+.counter > * + * {
+  margin: 1.2em 0;
+}
+
+.counter .counterLabel {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 0.5em;
+  font-size: 2.5rem;
+  align-items: center;
+}
+
+.counter .counterLabel h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.counter .counterLabel .counterNumber {
+  margin: 0;
+  padding: 0;
+  color: #6a85ff;
+  width: auto;
+  justify-self: start;
+}
+.counter .counterLabel .counterLimitReached {
+  margin: 0;
+  padding: 0;
+  color: #ff6a6a;
+  width: auto;
+}
+
+.counter .buttonWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1em;
+}
+
+.counter .buttonWrapper button {
+  font-size: 1.75rem;
+  padding: 0.8em 1.6em;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 350ms ease;
+}
+
+.counter .buttonWrapper button:hover {
+  transition: 350ms ease;
+}
+
+.counter .add {
+  background-color: #202434;
+}
+
+.counter .add:hover {
+  border: 3px solid #6fff6a;
+  background-color: #203427;
+}
+
+.counter .substract {
+  background-color: #202434;
+}
+
+.counter .substract:hover {
+  border: 3px solid #ff6a6a;
+  background-color: #342020;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: block;
+    padding: 1em;
+  }
+
+  .counter {
+    background-color: #2d3141;
+    padding: 1em;
+    padding-bottom: 1em;
+    border-radius: 13px;
+    display: inline-block;
+  }
+
+  .counter h1,
+  .counter h2 {
+    font-size: 2.7rem;
+  }
+
+  .counter .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .counter .buttonWrapper > * + * {
+    margin-top: 1em;
+  }
+
+  .counter .buttonWrapper button {
+    width: 100%;
+  }
+}
